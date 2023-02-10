@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  // background-color: #fff;
+  background-color: #337;
+}
+.container {
+  width: 600px;
+  height: calc(100vh);
+  padding: 20px;
+  color: white;
+  // color: #000;
+  margin: 0 auto;
+}
+.btn {
+  width: 30%;
+  padding: 5px 0;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #3e8e41;
+  border: none;
+  box-shadow: 0 9px #999;
+  margin: 30px auto;
+  display: block;
+}
+
+.btn:hover {
+  background-color: #04aa6d;
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.container {
+  .header {
+    margin: 30px 0;
+    margin-top: 15px;
+    text-align: center;
+    border-bottom: 2px solid #04aa6d;
+    border-radius: 10px;
+  }
+  .form {
+    & > div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      label {
+        font-weight: bold;
+        margin-right: 20px;
+        width: 20%;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        border: none;
+        color: white;
+        transition: 0.8s;
+        &:focus {
+          outline: 1px solid #04aa6d;
+        }
+      }
+      .alert {
+        color: red;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.3s;
+        opacity: 0;
+        transition: 0.5s;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+    .siteName {
+      margin-bottom: 30px;
+    }
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .searchInput {
+      flex: 1;
+      padding: 10px;
+      background-color: #333;
+      border: none;
+      color: white;
+      transition: 0.8s;
+      &:focus {
+        outline: 1px solid #04aa6d;
+      }
+    }
+    .clear {
+      background-color: #333;
+      margin-left: 10px;
+      color: #9c0000;
+      border: none;
+      padding: 10px 10px;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .bookMarks {
+    .empty {
+      text-align: center;
+      font-size: 20px;
+      text-decoration: line-through;
+    }
+    .bookMark {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #3e8e41;
+      border-left: 1px solid #3e8e41;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &:hover .name {
+        color: #04aa6d;
+      }
+      .name {
+        transition: 0.3s;
+      }
+      .control {
+        display: flex;
+        align-items: center;
+        .link {
+          color: white;
+          margin-right: 20px;
+          font-size: 18px;
+          &:hover {
+            color: #04aa6d;
+          }
+        }
+        .delete {
+          font-size: 18px;
+          cursor: pointer;
+          transform: 0.3s;
+          &:hover {
+            color: red;
+          }
+        }
+        .updateIcon {
+          margin-right: 20px;
+          font-size: 18px;
+          cursor: pointer;
+          transform: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
